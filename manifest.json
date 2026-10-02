@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "X Likes Cleaner",
+  "version": "0.3.0",
+  "description": "本地浏览器中的 X Likes 清理工具：可开始、暂停、限量、查看进度/已发现数量/运行时间。",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "action": {
+    "default_title": "X Likes Cleaner",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
