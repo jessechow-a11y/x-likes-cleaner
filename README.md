@@ -1,31 +1,47 @@
 # x-likes-cleaner
-A Chrome extension for batch removing X (Twitter) Likes.
-X Likes Cleaner 0.3.0
 
-本版新增（相比 0.2.0）：
-- 进度显示改为明确的"已完成 / 本轮上限"格式（例如 17 / 100），不再是容易误解为"账号总数"的单一数字
-- "本轮上限"改为下拉选择：100 / 500 / 1,000 / 5,000 / 10,000 / 自定义
-  （这些数值只是插件自己的处理批次设定，不是 X 官方规定的限制）
-- 新增"已发现帖子"：统计当前页面滚动加载过程中，插件实际看到过的帖子数量
-  （这是"页面已加载到的数量"，不是账号历史 Likes 的总数——X 是无限滚动页面，
-  插件无法可靠得知总数，因此不会伪造总数）
-- 新增"运行时间"：显示本轮从开始到现在实际运行了多久，暂停期间不计时
+A free, privacy-first, and open-source Chrome extension for batch removing X (Twitter) Likes history.
 
-保留（未改动的核心能力）：
-- 查找并点击 Unlike 按钮 → 等待 → 继续查找 → 无可点击项时滚动加载更多 → 继续，这一套 0.2.0
-  已验证成功的核心流程逻辑没有变化
-- 速度档位：稳妥 / 较快 / 快速
-- 开始/继续、暂停、停止
-- 每次只处理一个按钮，不做并发狂点
+[English](#english) | [中文](#中文)
 
-安全边界：
-- 不要求账号密码
-- 不读取/上传 Cookie
-- 不调用 X 私有 API
-- 不连接任何自建服务器
-- 仅操作当前用户已经打开的 Likes 页面，均在本地浏览器完成
+---
 
-注意：
-- 这是实验版，不保证永久兼容 X。
-- 平台页面结构和平台规则可能变化。
-- 建议先小批量测试，不要长时间连续自动操作。
+<a name="english"></a>
+## English
+
+### Features
+- ⚡ **Batch Unlike**: Automatically remove X (Twitter) Likes in batches.
+- 📊 **Progress Indicator**: Real-time progress display (e.g., 17 / 100).
+- ⚙️ **Custom Batch Size**: Process 100, 500, 1,000, 5,000, 10,000, or custom amounts.
+- 🔒 **Privacy-First**: Runs 100% locally in your browser. No personal data collected.
+
+### Installation
+1. Download the latest `X-Likes-Cleaner-v0.3.0.zip` from [Releases](https://github.com/jessechow-a11y/x-likes-cleaner/releases).
+2. Unzip the downloaded file.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer mode** (top-right toggle).
+5. Click **Load unpacked** (top-left button) and select the unzipped folder.
+
+---
+
+<a name="中文"></a>
+## 中文
+
+免費、保護隱私且開源的 Chrome 擴充功能，用於批次清理 X (Twitter) 歷史按讚紀錄。
+
+### 功能特點
+- ⚡ **批次取消按讚**：自動批次清理 X 點讚紀錄。
+- 📊 **進度顯示**：即時顯示已處理數量與設定上限（例如 17 / 100）。
+- ⚙️ **自訂處理量**：可選擇 100 / 500 / 1,000 / 5,000 / 10,000 或自訂數量。
+- 🔒 **安全隱私**：純前端本機執行，不收集任何個人資料與密碼。
+
+### 安裝步驟
+1. 從 [Releases 頁面](https://github.com/jessechow-a11y/x-likes-cleaner/releases) 下載最新的 ZIP 壓縮檔並解壓縮。
+2. 開啟 Chrome 瀏覽器，網址列輸入 `chrome://extensions/`。
+3. 開啟右上角 **「開發者模式」** 開關。
+4. 點擊左上角 **「載入未打包擴充功能」**，選擇解壓縮後的資料夾。
+
+---
+
+## License
+[MIT License](LICENSE)
